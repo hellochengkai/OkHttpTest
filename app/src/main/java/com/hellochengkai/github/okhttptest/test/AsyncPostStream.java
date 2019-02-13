@@ -18,7 +18,7 @@ import okio.BufferedSink;
 public class AsyncPostStream extends BaseTest{
     private static final String TAG = "AsyncPostStream";
     @Override
-    void call() {
+    public void call() {
         RequestBody requestBody = new RequestBody() {
             @Nullable
             @Override

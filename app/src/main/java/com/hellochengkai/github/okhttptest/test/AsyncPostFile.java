@@ -15,7 +15,7 @@ import okhttp3.Response;
 public class AsyncPostFile extends BaseTest{
     private static final String TAG = "AsyncPostFile";
     @Override
-    void call() {
+    public void call() {
         Request request = new Request.Builder()
                 .url("https://api.github.com/markdown/raw")
                 .post(RequestBody.create(MEDIA_TYPE_MARKDOWN,"test.md"))

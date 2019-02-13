@@ -16,7 +16,7 @@ import okhttp3.Response;
 public class AsyncPostForm extends BaseTest{
     private static final String TAG = "AsyncPostForm";
     @Override
-    void call() {
+    public void call() {
         RequestBody requestBody = new FormBody.Builder()
                 .add("search", "Jurassic Park")
                 .build();

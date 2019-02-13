@@ -3,6 +3,7 @@ package com.hellochengkai.github.okhttptest.test;
 import android.util.Log;
 
 import java.io.IOException;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -12,11 +13,16 @@ import okhttp3.Response;
 public class AsyncGet extends BaseTest{
 
     private static final String TAG = "AsyncGet";
+
     @Override
-    void call() {
+    public void call() {
         OkHttpClient okHttpClient = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(HTTP_WWW_BAIDU_COM)
+        Request request = null;
+
+        Log.d(TAG, "call: " +  HTTP_URL_BAIDU.toString());
+
+        request = new Request.Builder()
+                .url(HTTP_URL_BAIDU)
                 .build();
         Call call = okHttpClient.newCall(request);
         call.enqueue(new Callback() {

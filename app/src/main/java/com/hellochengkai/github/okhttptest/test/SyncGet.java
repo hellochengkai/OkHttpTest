@@ -13,14 +13,14 @@ import okhttp3.Response;
 public class SyncGet extends BaseTest{
     private static final String TAG = "SyncGet";
     @Override
-    void call() {
+    public void call() {
         new Thread(){
             @Override
             public void run() {
                 super.run();
                 OkHttpClient okHttpClient = new OkHttpClient();
                 Request request = new Request.Builder()
-                        .url(HTTP_WWW_BAIDU_COM)
+                        .url(HTTP_URL_BAIDU)
                         .get()
                         .build();
                 Call call = okHttpClient.newCall(request);

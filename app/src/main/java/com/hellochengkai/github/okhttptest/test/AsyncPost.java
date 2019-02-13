@@ -15,7 +15,7 @@ import okhttp3.Response;
 public class AsyncPost extends BaseTest{
     private static final String TAG = "AsyncPost";
     @Override
-    void call() {
+    public void call() {
         String requestBody = "I am chengkai";
         Request request = new Request.Builder()
                 .url("https://api.github.com/markdown/raw")
